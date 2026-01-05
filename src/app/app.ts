@@ -37,6 +37,9 @@ export class App {
       new Date(),
       128
     );
+
+    this.myOtherSnap.setLocation("Tokyo, Japan");
+    
   }
 
 }
