@@ -1,0 +1,23 @@
+.face-snap-card {
+    width: 35%;
+
+    img {
+        width: 100%;
+
+    }
+}
+
+.face-snap-button {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+
+    &:hover {
+        background-color: #e91e63;
+    }
+}
