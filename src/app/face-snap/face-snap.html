@@ -7,10 +7,13 @@
 }
 <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
 <p>{{faceSnap.description}}</p>
-<p>FaceSnap créé le {{faceSnap.createdAt}}</p>
+<p>FaceSnap créé le {{faceSnap.createdAt | date: "d MMMM yyyy, HH:mm"}}</p>
 <p>
     <button class="face-snap-button" (click)="onSnap()">{{ snapButtonText}}</button>
    <span [ngStyle]="{color: 'rgb(0, ' + faceSnap.snaps +',0)'}"> 🤌 {{ faceSnap.snaps }}</span>
    </p>
+   <p>{{ 4346234.36 | number}}</p>
+   <p>{{ 0.3367 | percent}}</p>
+   <p>{{ 336.75 | currency: "EUR"}}</p>
 </div>
 
