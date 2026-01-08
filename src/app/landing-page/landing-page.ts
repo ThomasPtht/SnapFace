@@ -1,17 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-landing-page',
-  imports: [RouterLink],
+  imports: [RouterLink, FormsModule],
   templateUrl: './landing-page.html',
   styleUrl: './landing-page.scss',
 })
-export class LandingPage {
+export class LandingPage implements OnInit {
+
+  userEmail!: string;
+
 
   constructor(private router: Router) { }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
   onContinue() {
     this.router.navigateByUrl('facesnaps');
+  }
+
+  onSubmitForm(): void {
+    console.log(this.userEmail)
+
   }
 }
