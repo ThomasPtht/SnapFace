@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { Header } from './header/header';
 import { interval, Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
-import { map } from 'rxjs/operators';
+import { filter, map } from 'rxjs/operators';
 
 
 
@@ -20,7 +20,7 @@ export class App {
   interval$!: Observable<string>;
 
   ngOnInit() {
-    this.interval$ = interval(1000).pipe(map(value => value % 2 === 0 ? `Je suis ${value}, je suis pair !` : `Je suis ${value}, je suis impair !`)
+    this.interval$ = interval(1000).pipe(filter(value => value % 3 === 0), map(value => value % 2 === 0 ? `Je suis ${value}, je suis pair !` : `Je suis ${value}, je suis impair !`)
     );
   }
 
