@@ -9,7 +9,7 @@ import { filter, map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
-  imports: [Header, RouterOutlet, AsyncPipe],
+  imports: [Header, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
